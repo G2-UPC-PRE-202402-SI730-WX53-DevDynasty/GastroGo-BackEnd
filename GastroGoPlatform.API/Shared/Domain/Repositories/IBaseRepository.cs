@@ -1,4 +1,4 @@
-﻿namespace GastroGoPlatform.API.Domain.Repositories
+﻿namespace GastroGoPlatform.API.Shared.Domain.Repositories
 {
     public interface IBaseRepository<TEntity>
     {
