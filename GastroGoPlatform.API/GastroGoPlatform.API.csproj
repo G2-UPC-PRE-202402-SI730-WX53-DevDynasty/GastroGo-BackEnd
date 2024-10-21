@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <Content Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="EntityFrameworkCore.CreatedUpdatedDate" Version="8.0.0" />
     <PackageReference Include="Humanizer" Version="2.14.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
@@ -14,6 +21,17 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational.Design" Version="1.1.6" />
     <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Worker\Application\Internal\CommandServices\" />
+    <Folder Include="Worker\Application\Internal\QueryServices\" />
+    <Folder Include="Worker\Domain\Repositories\" />
+    <Folder Include="Worker\Domain\Services\" />
+    <Folder Include="Worker\Infrastructure\Persistence\" />
+    <Folder Include="Worker\Infrastructure\Persistence\EFC\Repositories\" />
+    <Folder Include="Worker\Interfaces\REST\Resources\" />
+    <Folder Include="Worker\Interfaces\REST\Transform\" />
   </ItemGroup>
 
 </Project>
