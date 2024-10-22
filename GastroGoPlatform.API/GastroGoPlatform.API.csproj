@@ -24,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Worker\Domain\Model\Commands\" />
     <Folder Include="Worker\Domain\Model\Queries\" />
   </ItemGroup>
 
