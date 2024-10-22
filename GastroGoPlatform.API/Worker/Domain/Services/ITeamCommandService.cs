@@ -6,5 +6,7 @@ namespace GastroGoPlatform.API.Worker.Domain.Services
     public interface ITeamCommandService
     {
         Task<Team?> Handle(CreateTeamCommand command);
+
+        Task<Team?> Handle(AddMemberCommand command);
     }
 }
