@@ -7,15 +7,24 @@ namespace GastroGoPlatform.API.Worker.Domain.Model.Aggregates
     ///     This class represents the Team Aggregate. Used to store each team and its respective leader and members. 
     /// </summary>
     public class Team
-    { 
+    {
         public int Id { get; set; }
         public required string TeamName { get; set; }
         public required TeamLeader Leader { get; set; }
+        public int LeaderId { get; set; }
         public required List<TeamMember> Members { get; set; }
-        public Team(string teamName, TeamLeader leader)
+
+        public Team()
+        {
+            this.TeamName = "";
+            this.Leader = new TeamLeader();
+            this.Members = new List<TeamMember>();
+        }
+
+        public Team(string teamName, int leader)
         {
             TeamName = teamName;
-            Leader = leader;
+            LeaderId = leader;
             Members = new List<TeamMember>();
         }
 
@@ -23,12 +32,14 @@ namespace GastroGoPlatform.API.Worker.Domain.Model.Aggregates
         {
             this.Id = command.TeamId;
             this.TeamName = command.TeamName;
-            this.Leader = new TeamLeader(command.LeaderId);
+            this.LeaderId = command.LeaderId;
         }
-        
-        public void AddMember(TeamMember teamMember)
+
+        public void AddMember(AddMemberCommand command)
         {
-            Members.Add(teamMember);
+            this.Id = command.TeamId;
+            Members.Add(new TeamMember(command.MemberId));  
+
         }
         public void RemoveMember(TeamMember teamMember)
         {
