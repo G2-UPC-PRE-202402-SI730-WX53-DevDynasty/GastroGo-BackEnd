@@ -7,12 +7,11 @@ namespace GastroGoPlatform.API.Worker.Domain.Model.Entities
     /// </summary>
     public class TeamMember
     {
-        public Guid MemberId { get; private set; }
+        public int MemberId { get; private set; }
         public int UserId { get; private set; }
         public TeamRole Role { get; private set; }
         public TeamMember(int userId)
         {
-            MemberId = Guid.NewGuid();
             UserId = userId;
             Role = TeamRole.Member;
         }
