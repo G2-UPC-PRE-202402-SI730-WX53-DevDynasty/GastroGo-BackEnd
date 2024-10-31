@@ -9,8 +9,8 @@ namespace GastroGoPlatform.API.Worker.Domain.Model.Aggregates
     public class Team
     {
         public int Id { get; set; }
-        public required string TeamName { get; set; }
-        public required TeamLeader Leader { get; set; }
+        public string TeamName { get; set; }
+        public TeamLeader Leader { get; set; }
         public int LeaderId { get; set; }
         public required List<TeamMember> Members { get; set; }
 
@@ -33,17 +33,6 @@ namespace GastroGoPlatform.API.Worker.Domain.Model.Aggregates
             this.Id = command.TeamId;
             this.TeamName = command.TeamName;
             this.LeaderId = command.LeaderId;
-        }
-
-        public void AddMember(AddMemberCommand command)
-        {
-            this.Id = command.TeamId;
-            Members.Add(new TeamMember(command.MemberId));  
-
-        }
-        public void RemoveMember(TeamMember teamMember)
-        {
-            Members.Remove(teamMember);
         }
     }
 }
