@@ -2,7 +2,10 @@
 {
     public class TeamPreference
     {
+        public int Id { get; set; }
+        public int TeamId { get; }
+        public int OrderId { get; }
 
-        // TODO: add properties to store the team's preferences and methods.
+
     }
 }

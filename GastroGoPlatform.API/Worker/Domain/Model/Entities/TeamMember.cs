@@ -7,9 +7,9 @@ namespace GastroGoPlatform.API.Worker.Domain.Model.Entities
     /// </summary>
     public class TeamMember
     {
-        public int Id { get; private set; }
-        public int UserId { get; private set; }
-        public TeamRole Role { get; private set; }
+        public int Id { get; set; }
+        public int UserId { get; }
+        public TeamRole Role { get; set; }
 
         public TeamMember()
         {

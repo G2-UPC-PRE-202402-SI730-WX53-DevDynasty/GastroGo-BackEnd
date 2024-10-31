@@ -2,10 +2,10 @@
 {
     public class Vote
     {
-        public int Id { get; set; }
-        /// <summary>
-        ///     Dictionary of votes for each restaurant
-        /// </summary>
-        public required Dictionary<string, int> Votes { get; set; }
+        public int Id { get; set; } 
+        public int LeaderId { get; }
+        public int MemberId { get; }
+        public int RestaurantId { get; }
+
     }
 }
