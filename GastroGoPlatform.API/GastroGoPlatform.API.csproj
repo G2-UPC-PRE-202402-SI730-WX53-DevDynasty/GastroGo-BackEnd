@@ -7,13 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="NewFolder\**" />
-    <Content Remove="NewFolder\**" />
-    <EmbeddedResource Remove="NewFolder\**" />
-    <None Remove="NewFolder\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="EntityFrameworkCore.CreatedUpdatedDate" Version="8.0.0" />
     <PackageReference Include="Humanizer" Version="2.14.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
@@ -27,6 +20,10 @@
   <ItemGroup>
     <Folder Include="Worker\Application\Internal\CommandServices\" />
     <Folder Include="Worker\Application\Internal\QueryServices\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Worker\Domain\Model\Aggregates\" />
   </ItemGroup>
 
 </Project>
