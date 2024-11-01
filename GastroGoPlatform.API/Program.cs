@@ -7,6 +7,11 @@ using GastroGoPlatform.API.Shared.Domain.Repositories;
 using GastroGoPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration;
 using GastroGoPlatform.API.Shared.Infrastructure.Persistence.EFC.Repositories;
 using Microsoft.EntityFrameworkCore;
+using GastroGoPlatform.API.Worker.Domain.Repositories;
+using GastroGoPlatform.API.Worker.Infrastructure.Repositories;
+using GastroGoPlatform.API.Worker.Domain.Services.Command;
+using GastroGoPlatform.API.Worker.Application.Internal;
+using GastroGoPlatform.API.Worker.Domain.Services.Query;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -59,6 +64,10 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IMenuRepository, MenuRepository>();
 builder.Services.AddScoped<IMenuCommandService, MenuCommandService>();
 builder.Services.AddScoped<IMenuQueryService, MenuQueryService>();
+
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderCommandService, OrderCommadService>();
+builder.Services.AddScoped<IOrderQueryService, OrderQueryService>();
 
 var app = builder.Build();
 

@@ -39,6 +39,14 @@ namespace GastroGoPlatform.API.Shared.Infrastructure.Persistence.EFC.Configurati
                          .HasColumnName("Price")
                          .IsRequired();
                 });
+
+            // Order
+            modelBuilder.Entity<Order>().HasKey(o => o.OrderId);
+            modelBuilder.Entity<Order>().Property(o => o.OrderId).IsRequired().ValueGeneratedOnAdd();
+            modelBuilder.Entity<Order>().Property(o => o.Date).IsRequired();
+            modelBuilder.Entity<Order>().Property(o => o.Status).HasConversion<string>().IsRequired();
+            modelBuilder.Entity<Order>().Property(o => o.DeliveryTime).IsRequired();
+            modelBuilder.Entity<Order>().Property(o => o.CustomerId).IsRequired();
         }
     }
 }
