@@ -17,13 +17,4 @@
 	<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.9.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Worker\Application\Internal\CommandServices\" />
-    <Folder Include="Worker\Application\Internal\QueryServices\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Worker\Domain\Model\Aggregates\" />
-  </ItemGroup>
-
 </Project>
