@@ -3,10 +3,9 @@ using GastroGoPlatform.API.Booking.Domain.Model.Commands;
 
 namespace GastroGoPlatform.API.Booking.Domain.Services
 {
-    public interface ITeamCommandService
+    public interface ITeamActivityCommandService
     {
-        Task<Team?> Handle(CreateTeamCommand command);
-
-        Task<Team?> Handle(AddMemberCommand command);
+        Task<TeamActivity?> Handle(CreateTeamActivityCommand command);
+        Task<TeamActivity?> Handle(AddRoleCommand command);
     }
 }

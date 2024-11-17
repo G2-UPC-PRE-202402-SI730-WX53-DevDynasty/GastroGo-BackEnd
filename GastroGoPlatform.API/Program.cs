@@ -64,6 +64,10 @@ builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderCommandService, OrderCommadService>();
 builder.Services.AddScoped<IOrderQueryService, OrderQueryService>();
 
+builder.Services.AddScoped<ITeamActivityRepository, TeamActivityRepository>();
+builder.Services.AddScoped<ITeamActivityCommandService, TeamActivityCommandService>();
+builder.Services.AddScoped<ITeamActivityQueryService, TeamActivityQueryService>();
+
 var app = builder.Build();
 
 // Verify Database Objects are created
@@ -78,7 +82,7 @@ using (var scope = app.Services.CreateScope())
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-   
+    
 }
 
 app.UseSwagger();

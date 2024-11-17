@@ -5,6 +5,10 @@ using GastroGoPlatform.API.Shared.Domain.Repositories;
 
 namespace GastroGoPlatform.API.Booking.Application.Internal
 {
+    /// <summary>
+    ///     Implementation of the IOrderQueryService interface.
+    ///     This service handles queries related to retrieving order information from the repository.
+    /// </summary>
     public class OrderQueryService(IOrderRepository orderRepository, IUnitOfWork unitOfWork) : IOrderQueryService
     {
         public async Task<IEnumerable<Order>> Handle(GetAllOrdersQuery query)
@@ -16,7 +20,7 @@ namespace GastroGoPlatform.API.Booking.Application.Internal
 
         public async Task<Order?> Handle(GetOrderByIdQuery query)
         {
-            var order = await orderRepository.FindByOrderIdAsync(query.Id);
+            var order = await orderRepository.FindByOrderIdAsync(query.OrderId);
             await unitOfWork.CompleteAsync();
             return order;
         }

@@ -5,13 +5,19 @@ using GastroGoPlatform.API.Booking.Interfaces.REST.Resources;
 using GastroGoPlatform.API.Booking.Interfaces.REST.Transform;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
+using System.Net.Mime;
 
-namespace GastroGoPlatform.API.Booking.Interfaces.REST
-{
-    public class OrderController(
+namespace GastroGoPlatform.API.Booking.Interfaces.REST;
+[ApiController]
+[Route("api/v1/[controller]")]
+[Produces(MediaTypeNames.Application.Json)]
+[Tags("Order")]
+public class OrderController(
         IOrderCommandService orderCommandService,
         IOrderQueryService orderQueryService) : ControllerBase
     {
+
+        [HttpPost("")]
         [SwaggerOperation(
             Summary = "Create a new order",
             Description = "Creates a new order with the provided details",
@@ -46,7 +52,7 @@ namespace GastroGoPlatform.API.Booking.Interfaces.REST
             return Ok(resources);
         }
 
-        [HttpGet("all")]
+        [HttpGet("all-orders")]
         [SwaggerOperation(
             Summary = "Get all orders",
             Description = "Retrieves all orders in the system",
@@ -55,7 +61,7 @@ namespace GastroGoPlatform.API.Booking.Interfaces.REST
         [SwaggerResponse(200, "Orders found", typeof(IEnumerable<OrderResource>))]
         public async Task<ActionResult> GetAllOrders()
         {
-            var getAllOrdersQuery = new GetAllOrdersQuery(0); // Adjust query parameters as needed
+            var getAllOrdersQuery = new GetAllOrdersQuery(); 
             var result = await orderQueryService.Handle(getAllOrdersQuery);
             if (result == null || !result.Any()) return NotFound();
 
@@ -96,10 +102,4 @@ namespace GastroGoPlatform.API.Booking.Interfaces.REST
 
             return NoContent();
         }
-    }
-}
-
-
-
-
-
+ }

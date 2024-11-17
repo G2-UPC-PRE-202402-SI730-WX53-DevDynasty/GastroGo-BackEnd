@@ -47,6 +47,28 @@ namespace GastroGoPlatform.API.Shared.Infrastructure.Persistence.EFC.Configurati
             modelBuilder.Entity<Order>().Property(o => o.Status).HasConversion<string>().IsRequired();
             modelBuilder.Entity<Order>().Property(o => o.DeliveryTime).IsRequired();
             modelBuilder.Entity<Order>().Property(o => o.CustomerId).IsRequired();
+            
+            // TeamActivity
+            modelBuilder.Entity<TeamActivity>().HasKey(t => t.TeamId);
+            modelBuilder.Entity<TeamActivity>().Property(t => t.TeamId).IsRequired().ValueGeneratedOnAdd();
+            modelBuilder.Entity<TeamActivity>().Property(t => t.TeamName).IsRequired();
+            modelBuilder.Entity<TeamActivity>().HasMany(t => t.Roles)
+                .WithOne(r => r.TeamActivity)
+                .HasForeignKey(r => r.TeamId)
+                .OnDelete(DeleteBehavior.Cascade);
+            
+            
+            // Role
+            modelBuilder.Entity<Role>().HasKey(r => r.RoleId);
+            modelBuilder.Entity<Role>()
+                .Property(r => r.RoleId).IsRequired().ValueGeneratedOnAdd();
+            modelBuilder.Entity<Role>()
+                .Property(r => r.UserId).IsRequired();
+            modelBuilder.Entity<Role>()
+                .Property(r => r.RoleType).HasConversion<string>().IsRequired();
+            modelBuilder.Entity<Role>()
+                .Property(r => r.TeamId).IsRequired();
+
 
             // Order Details
             modelBuilder.Entity<OrderDetails>().HasKey(od => od.Id);
