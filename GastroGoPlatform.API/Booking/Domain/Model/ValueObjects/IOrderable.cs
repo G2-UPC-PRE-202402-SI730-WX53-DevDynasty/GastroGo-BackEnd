@@ -1,4 +1,4 @@
-﻿namespace GastroGoPlatform.API.Worker.Domain.Model.ValueObjects
+﻿namespace GastroGoPlatform.API.Booking.Domain.Model.ValueObjects
 {
     public interface IOrderable
     {

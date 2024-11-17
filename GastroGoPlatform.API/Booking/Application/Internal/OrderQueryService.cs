@@ -1,14 +1,9 @@
-﻿using GastroGoPlatform.API.Booking.Domain.Repositories;
+﻿using GastroGoPlatform.API.Booking.Domain.Model.Queries;
+using GastroGoPlatform.API.Booking.Domain.Repositories;
+using GastroGoPlatform.API.Booking.Domain.Services;
 using GastroGoPlatform.API.Shared.Domain.Repositories;
-using GastroGoPlatform.API.Shared.Infrastructure.Persistence.EFC.Repositories;
-using GastroGoPlatform.API.Worker.Domain.Model.Commnads;
-using GastroGoPlatform.API.Worker.Domain.Model.Queries;
-using GastroGoPlatform.API.Worker.Domain.Repositories;
-using GastroGoPlatform.API.Worker.Domain.Services.Command;
-using GastroGoPlatform.API.Worker.Domain.Services.Query;
-using GastroGoPlatform.API.Worker.Infrastructure.Repositories;
 
-namespace GastroGoPlatform.API.Worker.Application.Internal
+namespace GastroGoPlatform.API.Booking.Application.Internal
 {
     public class OrderQueryService(IOrderRepository orderRepository, IUnitOfWork unitOfWork) : IOrderQueryService
     {

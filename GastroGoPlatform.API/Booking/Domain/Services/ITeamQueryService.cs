@@ -1,7 +1,7 @@
-﻿using GastroGoPlatform.API.Worker.Domain.Model.Aggregates;
-using GastroGoPlatform.API.Worker.Domain.Model.Queries;
+﻿using GastroGoPlatform.API.Booking.Domain.Model.Aggregates;
+using GastroGoPlatform.API.Booking.Domain.Model.Queries;
 
-namespace GastroGoPlatform.API.Worker.Domain.Services
+namespace GastroGoPlatform.API.Booking.Domain.Services
 {
     public interface ITeamQueryService
     {

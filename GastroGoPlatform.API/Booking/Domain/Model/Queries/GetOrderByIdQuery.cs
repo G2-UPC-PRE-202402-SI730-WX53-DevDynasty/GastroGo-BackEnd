@@ -1,4 +1,4 @@
-﻿namespace GastroGoPlatform.API.Worker.Domain.Model.Queries
+﻿namespace GastroGoPlatform.API.Booking.Domain.Model.Queries
 {
     public record GetOrderByIdQuery(int Id)
     {

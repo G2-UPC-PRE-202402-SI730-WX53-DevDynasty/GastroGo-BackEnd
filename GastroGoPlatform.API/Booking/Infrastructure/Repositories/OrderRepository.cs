@@ -1,9 +1,9 @@
-﻿using GastroGoPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration;
+﻿using GastroGoPlatform.API.Booking.Domain.Repositories;
+using GastroGoPlatform.API.Shared.Infrastructure.Persistence.EFC.Configuration;
 using GastroGoPlatform.API.Shared.Infrastructure.Persistence.EFC.Repositories;
-using GastroGoPlatform.API.Worker.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace GastroGoPlatform.API.Worker.Infrastructure.Repositories
+namespace GastroGoPlatform.API.Booking.Infrastructure.Repositories
 {
     public class OrderRepository(AppDbContext context) : BaseRepository<Order>(context), IOrderRepository
     {

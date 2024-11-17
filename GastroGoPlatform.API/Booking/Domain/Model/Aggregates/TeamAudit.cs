@@ -1,7 +1,7 @@
-﻿using EntityFrameworkCore.CreatedUpdatedDate.Contracts;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using EntityFrameworkCore.CreatedUpdatedDate.Contracts;
 
-namespace GastroGoPlatform.API.Worker.Domain.Model.Aggregates
+namespace GastroGoPlatform.API.Booking.Domain.Model.Aggregates
 {
     public partial class TeamAudit : IEntityWithCreatedUpdatedDate
     {

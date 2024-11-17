@@ -1,4 +1,4 @@
-﻿namespace GastroGoPlatform.API.Worker.Domain.Model.Commands
+﻿namespace GastroGoPlatform.API.Booking.Domain.Model.Commands
 {
     /// <summary>
     ///     Command to create a team by the leader.

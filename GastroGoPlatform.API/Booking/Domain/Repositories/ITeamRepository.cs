@@ -1,7 +1,7 @@
-﻿using GastroGoPlatform.API.Shared.Domain.Repositories;
-using GastroGoPlatform.API.Worker.Domain.Model.Aggregates;
+﻿using GastroGoPlatform.API.Booking.Domain.Model.Aggregates;
+using GastroGoPlatform.API.Shared.Domain.Repositories;
 
-namespace GastroGoPlatform.API.Worker.Domain.Repositories
+namespace GastroGoPlatform.API.Booking.Domain.Repositories
 {
     public interface ITeamRepository : IBaseRepository<Team>
     {

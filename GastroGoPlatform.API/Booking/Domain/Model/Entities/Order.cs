@@ -1,5 +1,5 @@
-﻿using GastroGoPlatform.API.Worker.Domain.Model.Valueobjects;
-using GastroGoPlatform.API.Worker.Domain.Model.ValueObjects;
+﻿using GastroGoPlatform.API.Booking.Domain.Model.Valueobjects;
+using GastroGoPlatform.API.Booking.Domain.Model.ValueObjects;
 
 public partial class Order : IOrderable
 {

@@ -1,13 +1,12 @@
-﻿using GastroGoPlatform.API.Worker.Domain.Model.Commnads;
-using GastroGoPlatform.API.Worker.Domain.Model.Queries;
-using GastroGoPlatform.API.Worker.Domain.Services.Command;
-using GastroGoPlatform.API.Worker.Domain.Services.Query;
-using GastroGoPlatform.API.Worker.Interfaces.REST.Resources;
-using GastroGoPlatform.API.Worker.Interfaces.REST.Transform;
+﻿using GastroGoPlatform.API.Booking.Domain.Model.Commands;
+using GastroGoPlatform.API.Booking.Domain.Model.Queries;
+using GastroGoPlatform.API.Booking.Domain.Services;
+using GastroGoPlatform.API.Booking.Interfaces.REST.Resources;
+using GastroGoPlatform.API.Booking.Interfaces.REST.Transform;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace GastroGoPlatform.API.Worker.Interfaces.REST
+namespace GastroGoPlatform.API.Booking.Interfaces.REST
 {
     public class OrderController(
         IOrderCommandService orderCommandService,

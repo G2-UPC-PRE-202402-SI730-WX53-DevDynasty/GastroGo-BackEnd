@@ -1,4 +1,4 @@
-﻿namespace GastroGoPlatform.API.Worker.Domain.Model.Entities
+﻿namespace GastroGoPlatform.API.Booking.Domain.Model.Entities
 {
     public class TeamPreference
     {

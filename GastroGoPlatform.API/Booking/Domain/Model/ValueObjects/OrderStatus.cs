@@ -1,4 +1,4 @@
-﻿namespace GastroGoPlatform.API.Worker.Domain.Model.Valueobjects
+﻿namespace GastroGoPlatform.API.Booking.Domain.Model.Valueobjects
 {
     public enum OrderStatus
     {

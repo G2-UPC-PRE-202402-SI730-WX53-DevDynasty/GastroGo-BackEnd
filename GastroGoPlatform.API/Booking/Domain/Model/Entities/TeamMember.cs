@@ -1,4 +1,5 @@
-﻿using GastroGoPlatform.API.Worker.Domain.Model.Valueobjects;
+﻿using GastroGoPlatform.API.Booking.Domain.Model.ValueObjects;
+
 namespace GastroGoPlatform.API.Worker.Domain.Model.Entities
 {
     /// TeamMember Entity

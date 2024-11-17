@@ -1,6 +1,6 @@
-﻿using GastroGoPlatform.API.Worker.Interfaces.REST.Resources;
+﻿using GastroGoPlatform.API.Booking.Interfaces.REST.Resources;
 
-namespace GastroGoPlatform.API.Worker.Interfaces.REST.Transform
+namespace GastroGoPlatform.API.Booking.Interfaces.REST.Transform
 {
     public static class OrderResourceFromEntityAssembler
     {

@@ -1,4 +1,4 @@
-﻿namespace GastroGoPlatform.API.Worker.Interfaces.REST.Resources
+﻿namespace GastroGoPlatform.API.Booking.Interfaces.REST.Resources
 {
     public record OrderResource(int OrderId);
    

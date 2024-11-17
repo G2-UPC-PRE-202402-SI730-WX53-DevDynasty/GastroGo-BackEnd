@@ -1,7 +1,7 @@
-﻿using GastroGoPlatform.API.Worker.Domain.Model.Entities;
-using GastroGoPlatform.API.Worker.Domain.Model.Queries;
+﻿using GastroGoPlatform.API.Booking.Domain.Model.Queries;
+using GastroGoPlatform.API.Booking.Domain.Model.Aggregates;
 
-namespace GastroGoPlatform.API.Worker.Domain.Services.Query
+namespace GastroGoPlatform.API.Booking.Domain.Services
 {
     public interface IOrderQueryService
     {

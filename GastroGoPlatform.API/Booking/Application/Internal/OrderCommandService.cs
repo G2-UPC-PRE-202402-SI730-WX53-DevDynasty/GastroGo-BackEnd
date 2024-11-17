@@ -1,7 +1,7 @@
-﻿using GastroGoPlatform.API.Worker.Domain.Model.Commnads;
-using GastroGoPlatform.API.Worker.Domain.Services.Command;
+﻿using GastroGoPlatform.API.Booking.Domain.Model.Commands;
+using GastroGoPlatform.API.Booking.Domain.Services;
 
-namespace GastroGoPlatform.API.Worker.Application.Internal
+namespace GastroGoPlatform.API.Booking.Application.Internal
 {
     public class OrderCommadService : IOrderCommandService
     {

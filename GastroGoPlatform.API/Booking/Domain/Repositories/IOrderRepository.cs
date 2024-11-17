@@ -1,6 +1,6 @@
 ﻿using GastroGoPlatform.API.Shared.Domain.Repositories;
 
-namespace GastroGoPlatform.API.Worker.Domain.Repositories
+namespace GastroGoPlatform.API.Booking.Domain.Repositories
 {
     public interface IOrderRepository: IBaseRepository<Order>
     {

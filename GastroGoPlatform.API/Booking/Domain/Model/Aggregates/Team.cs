@@ -1,6 +1,8 @@
-﻿using GastroGoPlatform.API.Worker.Domain.Model.Commands;
+﻿using GastroGoPlatform.API.Booking.Domain.Model.Commands;
+using GastroGoPlatform.API.Booking.Domain.Model.Entities;
 using GastroGoPlatform.API.Worker.Domain.Model.Entities;
-namespace GastroGoPlatform.API.Worker.Domain.Model.Aggregates
+
+namespace GastroGoPlatform.API.Booking.Domain.Model.Aggregates
 {
     /// Team Aggregate
     /// <summary>
