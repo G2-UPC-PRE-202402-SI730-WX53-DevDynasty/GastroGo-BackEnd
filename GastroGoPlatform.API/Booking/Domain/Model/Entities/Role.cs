@@ -1,4 +1,5 @@
 ﻿
+using System.Text.Json.Serialization;
 using GastroGoPlatform.API.Booking.Domain.Model.Aggregates;
 using GastroGoPlatform.API.Booking.Domain.Model.ValueObjects;
 using Microsoft.AspNetCore.Identity;
@@ -17,6 +18,7 @@ namespace GastroGoPlatform.API.Booking.Domain.Model.Entities
         public ERoles RoleType { get; set; }
         
         public int TeamId { get; set; }
+        [JsonIgnore]
         public TeamActivity TeamActivity { get; set; }
         
         public Role(int userId, ERoles roleType, int teamId)
