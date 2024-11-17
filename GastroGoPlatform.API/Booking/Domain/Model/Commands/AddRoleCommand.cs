@@ -2,7 +2,7 @@
 {
     /// AddRoleCommand
     /// <summary>
-    /// 
+    /// This is the command for adding a role to a user in a team.
     /// </summary>
     /// <param name="TeamId"></param>
     /// <param name="UserId"></param>

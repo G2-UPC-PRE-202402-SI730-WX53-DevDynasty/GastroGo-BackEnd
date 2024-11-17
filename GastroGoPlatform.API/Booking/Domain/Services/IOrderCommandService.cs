@@ -2,6 +2,10 @@
 
 namespace GastroGoPlatform.API.Booking.Domain.Services
 {
+    /// Interface for order command service
+    /// <summary>
+    ///    Service to handle order commands
+    /// </summary>
     public interface IOrderCommandService
     {
         Task<Order?> Handle(CreateOrderCommand command);

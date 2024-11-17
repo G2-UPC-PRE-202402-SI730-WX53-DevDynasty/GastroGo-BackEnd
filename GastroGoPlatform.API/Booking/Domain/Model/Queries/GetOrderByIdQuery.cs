@@ -1,6 +1,10 @@
 ﻿namespace GastroGoPlatform.API.Booking.Domain.Model.Queries
 {
-    public record GetOrderByIdQuery(int Id)
+    /// <summary>
+    ///   Query to get order by id
+    /// </summary>
+    /// <param name="OrderId"></param>
+    public record GetOrderByIdQuery(int OrderId)
     {
     }
 }
