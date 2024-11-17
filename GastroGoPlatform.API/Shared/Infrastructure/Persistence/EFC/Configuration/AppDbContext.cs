@@ -47,6 +47,23 @@ namespace GastroGoPlatform.API.Shared.Infrastructure.Persistence.EFC.Configurati
             modelBuilder.Entity<Order>().Property(o => o.Status).HasConversion<string>().IsRequired();
             modelBuilder.Entity<Order>().Property(o => o.DeliveryTime).IsRequired();
             modelBuilder.Entity<Order>().Property(o => o.CustomerId).IsRequired();
+
+            // Order Details
+            modelBuilder.Entity<OrderDetails>().HasKey(od => od.Id);
+            modelBuilder.Entity<OrderDetails>().Property(od => od.Id).IsRequired().ValueGeneratedOnAdd();
+            modelBuilder.Entity<OrderDetails>()
+                .HasOne(od => od.IdOrder)
+                .WithOne() 
+                .HasForeignKey<OrderDetails>("OrderId")
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<OrderDetails>()
+                .HasOne(od => od.IdMenu)
+                .WithOne()
+                .HasForeignKey<OrderDetails>("MenuId")
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
