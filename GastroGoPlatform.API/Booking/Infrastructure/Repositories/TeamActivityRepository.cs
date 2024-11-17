@@ -9,15 +9,13 @@ namespace GastroGoPlatform.API.Booking.Infrastructure.Repositories;
 
 public class TeamActivityRepository(AppDbContext context) : BaseRepository<TeamActivity>(context), ITeamActivityRepository
 {
-    public new async Task<TeamActivity?> FindByTeamIdAsync(int teamId) =>
-    await _context.Set<TeamActivity>().Include(t => t.Roles)
-        .Where(t => t.TeamId == teamId).FirstOrDefaultAsync();
+    public new async Task<TeamActivity?> FindByTeamIdAsync(int teamId) => 
+        await _context.Set<TeamActivity>().Include(t => t.Roles)
+            .Where(t => t.TeamId == teamId).FirstOrDefaultAsync();
 
-    public async Task<IEnumerable<Role>> FindRolesByTeamIdAsync(int teamId)
-    {
-        var team = await FindByTeamIdAsync(teamId); 
-        return team?.Roles ?? Enumerable.Empty<Role>();
-    }
+    public async Task<IEnumerable<Role>> FindRolesByTeamIdAsync(int teamId) =>
+        await _context.Set<Role>()
+            .Where(r => r.TeamId == teamId).ToListAsync();
     
     public new async Task<IEnumerable<TeamActivity>> ListAsync() =>
         await _context.Set<TeamActivity>()

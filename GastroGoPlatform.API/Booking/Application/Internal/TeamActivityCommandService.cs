@@ -27,7 +27,7 @@ public class TeamActivityCommandService(ITeamActivityRepository teamActivityRepo
             throw new InvalidOperationException("Team not found.");
         }
         
-        var role = Role.AssignRole(command.UserId, Enum.Parse<ERoles>(command.RoleType));
+        var role = Role.AssignRole(command.UserId, Enum.Parse<ERoles>(command.RoleType), command.TeamId);
         team.AddRole(role);
         await unitOfWork.CompleteAsync();
         
