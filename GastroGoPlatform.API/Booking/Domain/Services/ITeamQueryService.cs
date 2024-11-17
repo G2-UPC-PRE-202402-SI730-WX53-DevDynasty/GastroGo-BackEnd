@@ -5,8 +5,7 @@ namespace GastroGoPlatform.API.Booking.Domain.Services
 {
     public interface ITeamQueryService
     {
-        Task<IEnumerable<TeamActivities>> Handle(GetAllTeamsByIdQuery query); 
-        Task<IEnumerable<TeamActivities>> Handle(GetAllMembersByTeamIdQuery query);
-        Task<TeamActivities?> Handle(GetTeamByIdQuery query);
+        Task<IEnumerable<TeamActivity>> Handle(GetAllTeamsQuery query); 
+        Task<TeamActivity?> Handle(GetTeamByIdQuery query);
     }
 }
