@@ -5,5 +5,6 @@ namespace GastroGoPlatform.API.Booking.Domain.Repositories
 {
     public interface ITeamActivityRepository : IBaseRepository<TeamActivity>
     {
+        Task<TeamActivity?> FindByTeamIdAsync(int teamId);
     }
 }
