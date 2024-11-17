@@ -3,7 +3,7 @@ using EntityFrameworkCore.CreatedUpdatedDate.Contracts;
 
 namespace GastroGoPlatform.API.Booking.Domain.Model.Aggregates
 {
-    public partial class TeamAudit : IEntityWithCreatedUpdatedDate
+    public partial class TeamActivitiesAudit : IEntityWithCreatedUpdatedDate
     {
         [Column("CreadtedAt")] public DateTimeOffset? CreatedDate { get; set; }
         [Column("UpdatedAt")] public DateTimeOffset? UpdatedDate { get; set; }

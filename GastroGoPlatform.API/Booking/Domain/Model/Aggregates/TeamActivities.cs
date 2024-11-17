@@ -8,7 +8,7 @@ namespace GastroGoPlatform.API.Booking.Domain.Model.Aggregates
     /// <summary>
     ///     This class represents the Team Aggregate. Used to store each team and its respective leader and members. 
     /// </summary>
-    public class Team
+    public class TeamActivities
     {
         public int Id { get; set; }
         public string TeamName { get; set; }
@@ -16,21 +16,21 @@ namespace GastroGoPlatform.API.Booking.Domain.Model.Aggregates
         public int LeaderId { get; set; }
         public required List<TeamMember> Members { get; set; }
 
-        public Team()
+        public TeamActivities()
         {
             this.TeamName = "";
             this.Leader = new TeamLeader();
             this.Members = new List<TeamMember>();
         }
 
-        public Team(string teamName, int leader)
+        public TeamActivities(string teamName, int leader)
         {
             TeamName = teamName;
             LeaderId = leader;
             Members = new List<TeamMember>();
         }
 
-        public Team(CreateTeamCommand command)
+        public TeamActivities(CreateTeamCommand command)
         {
             this.Id = command.TeamId;
             this.TeamName = command.TeamName;
