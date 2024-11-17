@@ -3,10 +3,10 @@ using GastroGoPlatform.API.Shared.Domain.Repositories;
 
 namespace GastroGoPlatform.API.Booking.Domain.Repositories
 {
-    public interface ITeamRepository : IBaseRepository<Team>
+    public interface ITeamRepository : IBaseRepository<TeamActivities>
     {
-        Task<IEnumerable<Team>> GetAllTeamsByIdAsync(int id);
-        Task<IEnumerable<Team>> GetAllMembersByTeamIdAsync(int id);
-        Task<Team?> GetTeamByIdAsync(int id);
+        Task<IEnumerable<TeamActivities>> GetAllTeamsByIdAsync(int id);
+        Task<IEnumerable<TeamActivities>> GetAllMembersByTeamIdAsync(int id);
+        Task<TeamActivities?> GetTeamByIdAsync(int id);
     }
 }
