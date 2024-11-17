@@ -1,7 +1,7 @@
 ﻿namespace GastroGoPlatform.API.Booking.Domain.Model.Commands
 {
-    public record CreateTeamCommand(string Name)
+    public record AddRoleCommand(int TeamId, int UserId, string RoleType)
     {
-        
+
     }
 }
