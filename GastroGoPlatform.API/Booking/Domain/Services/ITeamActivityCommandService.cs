@@ -5,6 +5,7 @@ namespace GastroGoPlatform.API.Booking.Domain.Services
 {
     public interface ITeamActivityCommandService
     {
-        Task<TeamActivity?> Handle(CreateTeamCommand command);
+        Task<TeamActivity?> Handle(CreateTeamActivityCommand command);
+        Task<TeamActivity?> Handle(AddRoleCommand command);
     }
 }

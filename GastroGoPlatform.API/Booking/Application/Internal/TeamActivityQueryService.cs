@@ -12,7 +12,7 @@ public class TeamActivityQueryService(ITeamActivityRepository teamActivityReposi
         return await teamActivityRepository.ListAsync();
     }
 
-    public async Task<TeamActivity?> Handle(GetTeamByIdQuery query)
+    public async Task<TeamActivity?> Handle(GetTeamActivityByIdQuery query)
     {
         return await teamActivityRepository.FindByTeamIdAsync(query.TeamId);
     }
