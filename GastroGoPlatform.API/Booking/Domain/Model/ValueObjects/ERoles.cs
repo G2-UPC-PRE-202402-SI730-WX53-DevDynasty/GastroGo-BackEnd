@@ -4,9 +4,10 @@
     /// <summary>
     ///    This class represents the Role Value Object. Used to store the roles of team leaders or members.
     /// </summary>
-    public enum Roles
+    public enum ERoles
     {
-        Leader,
-        Member
+        Default=0,
+        Leader=1,
+        Member=2
     }
 }
